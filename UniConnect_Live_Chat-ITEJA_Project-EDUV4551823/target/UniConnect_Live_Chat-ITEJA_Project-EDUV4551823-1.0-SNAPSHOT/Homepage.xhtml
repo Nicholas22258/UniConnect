@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--Nicholas Leong EDUV4551823-->
+<!--This page shows a personalised welcome message and lets the user navigate the web app. Acts as Home.html-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>UniConnect</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+        <link rel = "stylesheet" href = "Header_And_Footer.css"></link>
+        <link rel = "stylesheet" href = "Homepage.css"></link>
+        <link rel="icon" href="data:,"></link>
+    </h:head>
+    <h:body>
+        <header>
+            <img src = "Pics/UniConnectLogo.png" alt = "UniConnect Logo" id = "logo" onclick = "window.open('Homepage.xhtml', '_self')"></img>
+            <div id = "message_call">
+                <label id = "message" onclick = "window.open('Conversations.html', '_self')">Messages</label>
+                <label id = "videocall" onclick = "">Video Call</label>
+            </div>
+            <div id = "account">
+                <label id = "user" onclick = "window.open('index.html', '_self')">Log Out</label>
+            </div>
+        </header>
+        
+        <main>
+            <f:ajax render=":greeting" />
+            <!--supposed to show personalised greeting, but, for some reason, h:outputText is invisible-->
+            <h:outputText id = "greeting" value = "Welcome back #{homepage.getUsername()}" escape="false"/><br />
+            <button id = "messages" onclick = "window.open('Conversations.html', '_self')">Messages</button>
+            <button id = "camera" onclick = "">Camera</button>
+        </main>
+    </h:body>
+</html>

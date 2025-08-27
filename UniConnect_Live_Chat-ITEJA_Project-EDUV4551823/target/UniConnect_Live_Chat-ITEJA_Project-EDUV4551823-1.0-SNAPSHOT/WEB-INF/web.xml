@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Registration_Servlet</servlet-name>
+        <servlet-class>com.servlets.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Login_Servlet</servlet-name>
+        <servlet-class>com.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Homepage</servlet-name>
+        <servlet-class>com.servlets.HomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Conversations</servlet-name>
+        <servlet-class>com.servlets.ConversationsServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Chat</servlet-name>
+        <servlet-class>com.servlets.ChatServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Registration_Servlet</servlet-name>
+        <url-pattern>/Registration_Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login_Servlet</servlet-name>
+        <url-pattern>/Login_Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Homepage</servlet-name>
+        <url-pattern>/Homepage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Conversations</servlet-name>
+        <url-pattern>/startup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Chat</servlet-name>
+        <url-pattern>/Chat</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>faces/index.xhtml</welcome-file>
+    </welcome-file-list>
+</web-app>

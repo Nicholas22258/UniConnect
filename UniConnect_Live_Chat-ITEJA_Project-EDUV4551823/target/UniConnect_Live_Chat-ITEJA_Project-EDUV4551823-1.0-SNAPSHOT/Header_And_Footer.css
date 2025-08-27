@@ -1,0 +1,120 @@
+/* 
+    Created on : 11 Mar 2025, 15:11:45
+    Author     : Nicholas Leong EDUV4551823
+*/
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+main {
+    flex: 1;
+}
+
+/*=============================Header=========================================*/
+
+header {
+    min-height: 1.3229cm;
+    background: #4a8dd4;
+    display: flex;
+    height: 130px;
+}
+
+#logo{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+/*    position: absolute;*/
+}
+
+#message_call{
+    padding-left: 2cm;
+    font-size: 55px;
+    /*border: 2px green solid;*/
+    line-height: 100px;
+    text-align: center;
+    display: block;
+}
+
+#message{
+    margin: 0;
+    top: 50%;
+}
+
+#videocall{
+    margin: 0;
+    top: 50%;
+    padding-left: 2cm;
+}
+
+#account{
+    padding-left: 3cm;
+    font-size: 55px;
+    /*border: 2px green solid;*/
+    line-height: 100px;
+    text-align: center;
+}
+
+#logo:hover,
+#message:hover,
+#videocall:hover,
+#user:hover{
+    cursor: pointer;
+}
+
+/*=============================Footer=========================================*/
+
+/*footer {
+    min-height: 1.3229cm;
+    background: #4a8dd4;
+    display: flex;
+}
+
+#socialMedia{
+    line-height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerImages{
+    height: 50px;
+    width: 50px;
+    padding-left: 1.25cm;
+}
+
+#footerLabels{
+      padding-left: 2.9cm;
+    font-size: 20px;
+    border: 2px green solid;
+    line-height: 100px;
+    text-align: center;
+}
+
+#aboutUs{
+    padding-left: 2.5cm; 
+}
+
+#help{
+    padding-left: 2.5cm;
+}
+
+#businessPolicies{
+    padding-left: 2.5cm;
+}
+
+#copyright{
+    padding-left: 5.1cm;
+}
+
+#aboutUs:hover,
+#help:hover,
+#businessPolicies:hover{
+    cursor: pointer;
+}*/

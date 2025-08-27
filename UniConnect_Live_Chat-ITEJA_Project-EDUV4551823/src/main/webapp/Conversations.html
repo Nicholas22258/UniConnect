@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--Nicholas Leong EDUV4551823-->
+<!--This page shows the conversations that the user has currently, as well as will show the selected conversation-->
+<html>
+    <head>
+        <title>Conversations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "Header_And_Footer.css">
+        <link rel = "stylesheet" href = "Conversations.css">
+        <link rel="icon" href="data:,">
+    </head>
+    <body>
+        <header>
+            <img src = "Pics/UniConnectLogo.png" alt = "UniConnect Logo" id = "logo" onclick = "window.open('Homepage.xhtml', '_self')">
+            <div id = "message_call">
+                <label id = "message" onclick = "window.open('Conversations.html', '_self')">Messages</label>
+                <label id = "videocall" onclick = "window.open('VideoCall.html', '_self')">Video Call</label>
+            </div>
+            <div id = "account">
+                <label id = "user" onclick = "window.open('Homepage.xhtml', '_self')">Log Out</label>
+            </div>
+        </header>
+        
+        <main onload = "">
+            <script type = "text/javascript" src = "Chat.js"></script>
+            
+            <form action = "ConversationsServlet" method = "GET" id = "getCoversationsForm">
+                <input type = "submit" id = "getCoversations" value = "Get Conversations"></input>
+            </form>
+            
+            <!-- The following is hardcoded - please see Conversations.java line 170-->
+            <div id = "listOfConversationss">
+                <div class = "conversation">
+                    <form action = "Chat" method="GET">
+                        <label class = "heading">Me</label><br />
+                        <input type = "text" id = "groupID" name = "groupID" value = "1" hidden/>
+                        <label class = "lastMessage">Funny...</label><br />
+                        <input class = "goButton" type = "submit" value = "Go to">
+                    </form>
+                </div>
+               <div class = "conversation">
+                    <form action = "Chat" method="GET">
+                        <label class = "heading">Chocolate Lovers</label><br />
+                        <input type = "text" id = "groupID" value = "3" hidden/>
+                        <label class = "lastMessage">Mm, I find white chocolate too sweet</label><br />
+                        <input class = "goButton" type = "submit" value = "Go to">
+                    </form>
+                </div>
+            </div>
+
+            <div id = "chat-window" style = "display:none;">
+
+                <div id = "sendMessages">
+                    <form action = "ChatServlet">
+                        <input type = "text" id = "inputMessage" name = "inputMessage" placeholder = "Type something">
+                        <button id = "sendMessage">Send</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

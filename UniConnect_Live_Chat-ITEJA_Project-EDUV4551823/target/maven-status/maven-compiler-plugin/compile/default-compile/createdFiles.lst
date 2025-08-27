@@ -1,0 +1,9 @@
+com\servlets\Homepage.class
+com\servlets\Conversations.class
+com\mycompany\uniconnect_live_chat\iteja_project\eduv4551823\resources\JavaEE8Resource.class
+com\websocket\ChatEndpoint.class
+com\servlets\Registration_Servlet.class
+com\mycompany\uniconnect_live_chat\iteja_project\eduv4551823\JAXRSConfiguration.class
+com\beans\UserSession.class
+com\servlets\Chat.class
+com\servlets\Login_Servlet.class
