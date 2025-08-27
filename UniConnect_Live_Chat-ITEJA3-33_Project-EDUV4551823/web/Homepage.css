@@ -1,0 +1,33 @@
+/* 
+    Created on : 16 Aug 2025, 15:27:54
+    Author     : FamilyLaptop
+*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    max-height: 100vh;
+    width: 100vw;
+    /*border: 1px solid black;*/
+    background-color: #65a1e6;
+}
+
+#messages{
+    width: 6cm;
+    height: 1.8cm;
+    font-size: 50px;
+}
+
+#camera{
+    width: 6cm;
+    height: 1.8cm;
+    font-size: 50px;
+    margin-top: 1cm;
+}
+
+#greeting{
+    font-size: 60px;
+}
