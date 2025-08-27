@@ -8,6 +8,7 @@ function connect(){
     socket.onopen = function(){
         document.getElementById("listOfConversations").style.display = "hidden";
         document.getElementById("chat-window").style.display = "block";
+        document.getElementById("chat-window").style.overflowY = 'scroll'; 
     };
     
     socket.onmessage = function(event){
@@ -15,6 +16,7 @@ function connect(){
         let message = document.createElement("div");
         message.textContent = event.data;
         chatWindow.appendChild(message);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
     };
     
     socket.onclose = function(){
